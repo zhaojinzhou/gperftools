@@ -159,7 +159,7 @@ namespace {
     #define SYS_INLINE    inline
     #define SYS_PREFIX    -1
     #undef  SYS_LINUX_SYSCALL_SUPPORT_H
-    #include "linux_syscall_support.h"
+    #include "base/linux_syscall_support.h"
     SysCalls() : my_errno(0) { }
     int my_errno;
   };
@@ -615,7 +615,7 @@ int TCMalloc_ListAllProcessThreads(void *parameter,
       #define SYS_INLINE       inline
       #define SYS_PREFIX       0
       #undef  SYS_LINUX_SYSCALL_SUPPORT_H
-      #include "linux_syscall_support.h"
+      #include "base/linux_syscall_support.h"
     #endif
 
     /* Lock before clone so that parent can set
